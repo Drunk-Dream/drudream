@@ -1,0 +1,60 @@
+{
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "0.4.6",
+    "description": "An extremely fast LaTeX formatter written in Rust.",
+    "homepage": "https://github.com/WGUNDERWOOD/tex-fmt",
+    "license": "MIT",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/WGUNDERWOOD/tex-fmt/releases/download/v0.4.6/tex-fmt-x86_64-windows.zip",
+            "hash": "BA5CB594D4626F67CE7A66741F7CE9D95E6F5E6CA5C81952477CE5F5DEEDFB3E"
+        },
+        "32bit": {
+            "url": "",
+            "hash": ""
+        },
+        "arm64": {
+            "url": "",
+            "hash": ""
+        }
+    },
+    "pre_install": "",
+    "installer": {
+        "script": ""
+    },
+    "post_install": [
+        "",
+        ""
+    ],
+    "uninstaller": {
+        "script": ""
+    },
+    "bin": "tex-fmt.exe",
+    "env_add_path": [
+        "",
+        ""
+    ],
+    "persist": [
+        "",
+        ""
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/WGUNDERWOOD/tex-fmt/releases/download/v$version/tex-fmt-x86_64-windows.zip"
+            },
+            "32bit": {
+                "url": ""
+            },
+            "arm64": {
+                "url": ""
+            }
+        },
+        "hash": {
+            "url": "",
+            "regex": ""
+        }
+    }
+}
