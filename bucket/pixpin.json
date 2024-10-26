@@ -22,7 +22,6 @@
     },
     "persist": [
         "Config",
-        "Data",
         "History"
     ],
     "checkver": {
