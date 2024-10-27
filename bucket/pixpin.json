@@ -14,16 +14,15 @@
     "installer": {
         "args": [
             "/SILENT",
-            "/DIR=$dir"
+            "/NOICONS",
+            "/DIR=$dir",
+            "/MERGETASKS=!desktopicon"
         ]
     },
     "uninstaller": {
         "file": "unins000.exe"
     },
-    "persist": [
-        "Config",
-        "History"
-    ],
+    "persist": ["Config", "History"],
     "checkver": {
         "regex": "PixPin_([\\d.]+)\\.exe"
     },
