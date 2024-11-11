@@ -6,33 +6,20 @@
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://download.pixpinapp.com/PixPin_1.9.5.0.exe",
-            "hash": "ab8bb59cd871f2bc9422b9a8ea1f5c2055800c3b010dac23ad18984c93d736c3"
+            "url": "https://download.pixpinapp.com/PixPin_1.9.5.0.zip",
+            "hash": "sha1:b04d4e913d69b7de1c501e019171cef497d9c61a"
         }
     },
+    "extract_dir": "PixPin",
     "bin": "PixPin.exe",
-    "installer": {
-        "args": [
-            "/SILENT",
-            "/NOICONS",
-            "/DIR=$dir",
-            "/MERGETASKS=!desktopicon"
-        ]
-    },
-    "uninstaller": {
-        "file": "unins000.exe"
-    },
-    "persist": [
-        "Config",
-        "History"
-    ],
     "checkver": {
         "regex": "PixPin_([\\d.]+)\\.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.pixpinapp.com/PixPin_$version.exe"
+                "url": "https://download.pixpinapp.com/PixPin_$version.zip",
+                "extract_dir": "PixPin"
             }
         }
     }
