@@ -12,6 +12,7 @@
     },
     "extract_dir": "PixPin",
     "bin": "PixPin.exe",
+    "persist": ["Config", "Data", "History", "Temp"],
     "checkver": {
         "regex": "PixPin_([\\d.]+)\\.exe"
     },
