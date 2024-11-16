@@ -3,7 +3,7 @@
     "version": "1.9.5.0",
     "description": "功能强大使用简单的截图/贴图工具，帮助你提高效率",
     "homepage": "https://pixpinapp.com",
-    "license": "Unknown",
+    "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
             "url": "https://download.pixpinapp.com/PixPin_1.9.5.0.zip",
@@ -13,6 +13,7 @@
     "extract_dir": "PixPin",
     "bin": "PixPin.exe",
     "persist": ["Config", "Data", "History", "Temp"],
+    "shortcuts": [["PixPin.exe", "PixPin"]],
     "checkver": {
         "regex": "PixPin_([\\d.]+)\\.exe"
     },
