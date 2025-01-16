@@ -5,6 +5,7 @@
     "license": "MIT License",
     "url": "https://github.com/jxlpzqc/TMSpeech/releases/download/v0.4.2/TMSpeech.win-x64-with-model.7z",
     "hash": "10686a461e1e3b9691ec2c2e0d899a120f4bcbd80d2f0afec90aa0110894c2db",
+    "extract_dir": "TMSpeech.win-x64-with-model",
     "installer": {
         "script": [
             "# handle runtime cache",
@@ -35,12 +36,7 @@
             "}"
         ]
     },
-    "shortcuts": [
-        [
-            "TMSpeech.exe",
-            "TMSpeech"
-        ]
-    ],
+    "shortcuts": [["TMSpeech.exe", "TMSpeech"]],
     "checkver": {
         "url": "https://github.com/jxlpzqc/TMSpeech/releases",
         "regex": "v([\\d\\w-.]+)</h2>"
