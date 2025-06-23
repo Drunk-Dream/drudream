@@ -1,0 +1,29 @@
+{
+    "##": "腾讯元宝",
+    "version": "2.26.10.615",
+    "description": "[腾讯元宝] 基于腾讯混元大模型的AI应用，可以帮你写作绘画文案翻译编程搜索阅读总结的全能助手",
+    "homepage": "https://yuanbao.tencent.com",
+    "license": "Freeware",
+    "url": "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/e66fc8a2a38a2f1f90fd9752fce2dbb4/yuanbao_2.26.10.615_x64.exe#dl.7z",
+    "hash": "4320199608236fbb533804a3f4145c658d78bb7b39af2368d53250843e9825a5",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\install*.7z\" \"$dir\"",
+        "& 7z a -tzip -mx=6 -bb0 \"$dir\\content.pkg\" \"$dir\\content.pkg.nsisbin\\*\""
+    ],
+    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\install*.7z\", \"$dir\\content.pkg.nsisbin\", \"$dir\\plugin_compress.ini\" -Force -Recurse",
+    "shortcuts": [["yuanbao.exe", "腾讯元宝"]],
+    "checkver": {
+        "script": [
+            "$url='https://yuanbao.tencent.com/api/info/general'",
+            "Invoke-WebRequest -Uri $url -Headers @{'Cookie' = $env:COOKIE_YUANBAO_TENCENT_COM }"
+        ],
+        "jsonpath": "$.appBaseConfig.pcDownloadUrl.windows",
+        "regex": "official/(?<md5>[a-z0-9]+)/yuanbao_(?<version>[\\d.]+)_x64\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/$matchMd5/yuanbao_$matchVersion_x64.exe#dl.7z",
+        "hash": {
+            "regex": "$matchmd5"
+        }
+    }
+}
