@@ -1,10 +1,10 @@
 {
-    "version": "0.4.2",
+    "version": "0.4.3-funasr",
     "description": "腾讯会议摸鱼工具。语音转文字，实时字幕，会议语音识别，歌词字幕展示，识别历史记录查看",
     "homepage": "https://github.com/jxlpzqc/TMSpeech",
     "license": "MIT License",
-    "url": "https://github.com/jxlpzqc/TMSpeech/releases/download/v0.4.2/TMSpeech.win-x64.zip",
-    "hash": "0c974c083eb829cdb91ef428177f617528d09bc6a6a4d467fa7516cd0a29b5e4",
+    "url": "https://github.com/jxlpzqc/TMSpeech/releases/download/v0.4.3-funasr/TMSpeech.win-x64.zip",
+    "hash": "cabc7aa93ea293d09b9e94e9f2c06444307de7dbd63b88f833038a1e8af43b7e",
     "installer": {
         "script": [
             "# handle runtime cache",
